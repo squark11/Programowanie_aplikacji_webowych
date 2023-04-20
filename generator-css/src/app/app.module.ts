@@ -1,27 +1,26 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CssInputComponent } from './css-input/css-input.component';
-import { NowyComponent } from './nowy/nowy.component';
-// import { ModelsComponent } from './models/models.component';
+import { FormatowanieComponent } from './formatowanie/formatowanie.component';
+import { PodgladComponent } from './podglad/podglad.component';
+import { KodCSSComponent } from './kod-css/kod-css.component';
 
 @NgModule({
-  // declarations: [
-  //   AppComponent,
-  //   CssInputComponent,
-  //   ModelsComponent
-  // ],
+  declarations: [
+    AppComponent,
+    CssInputComponent,
+    FormatowanieComponent,
+    PodgladComponent,
+    KodCSSComponent
+  ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  declarations: [
-    CssInputComponent,
-    NowyComponent
-  ]
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-  
- }
+export class AppModule { }

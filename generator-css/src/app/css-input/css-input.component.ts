@@ -6,8 +6,8 @@ import {CSS } from 'src/app/models/css.model'
   templateUrl: './css-input.component.html',
   styleUrls: ['./css-input.component.scss']
 })
-
 export class CssInputComponent {
+
   protected css: CSS = {
     color: undefined,
     border: undefined,
