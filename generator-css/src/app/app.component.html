@@ -9,21 +9,45 @@
 <body>
     <div>
         <h3>Formatowanie</h3>
-        <label>Kolor tekstu <input class="tectColor"></label><br/>
-        <label>Obramowanie <input class="border"></label><br/>
-        <label>Kolor tła <input class="backgroundColor"></label><br/>
-        <label>Cień <input class="shadow"></label>
+        <label>Kolor tekstu <input #color type="text" class="tectColor"  (input)="onColorInputChange(color.value)" [(ngModel)]="css.color"></label><br/>
+        <label>Obramowanie <input #border class="border" (input)="onBorderInputChange(border.value)" [(ngModel)]="css.border"></label><br/>
+        <label>Kolor tła <input #background class="backgroundColor" (input)="onBackgroundInputChange(background.value)" [(ngModel)]="css.background"></label><br/>
+        <label>Cień <input #shadow class="shadow" (input)="onboxShadowInputChange(shadow.value)"[(ngModel)]="css.boxShadow"></label>
     </div>
 
     <div>
         <h3>Podgląd formatowania</h3>
-        <label>Pole tekstowe <input value="Teskt pola input"></label><br/>
-        <label>Przycisk <button>Tekst przycisku</button></label><br/>
-        <div>Lorem ipsum wewnątrz div,Lorem ipsum wewnątrz div</div>
+        <label>Pole tekstowe 
+            <input value="Teskt pola input" 
+            [style.color]="css.color"
+            [style.background-color]="css.background" 
+            [style.box-shadow]="css.boxShadow" 
+            [style.border]="css.border"           
+        ></label><br/>
+        
+        <label>Przycisk <button
+            [style.color]="css.color"
+            [style.background-color]="css.background" 
+            [style.box-shadow]="css.boxShadow" 
+            [style.border]="css.border"  
+            >Tekst przycisku</button></label><br/>
+        <div
+            [style.color]="css.color"
+            [style.background-color]="css.background" 
+            [style.box-shadow]="css.boxShadow" 
+            [style.border]="css.border"  
+            >Lorem ipsum wewnątrz div,Lorem ipsum wewnątrz div</div>
     </div>
 
     <div>
         <h3>Generator CSS</h3>
+        
+        <li *ngIf="css.color">color: {{css.color}}</li>
+        <li *ngIf="css.background">background: {{css.background}}</li>
+        <li *ngIf="css.boxShadow">boxShadow: {{css.boxShadow}}</li>
+        <li *ngIf="css.border">border: {{css.border}}</li>
+
+
         
     </div>
 </body>
