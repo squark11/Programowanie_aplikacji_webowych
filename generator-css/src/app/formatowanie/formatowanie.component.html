@@ -1,5 +1,9 @@
 <h3>Formatowanie</h3>
-        <label>Kolor tekstu <input #color type="text" class="tectColor"  (input)="onColorInputChange(color.value)" [(ngModel)]="css.color"></label><br/>
-        <label>Obramowanie <input #border class="border" (input)="onBorderInputChange(border.value)" [(ngModel)]="css.border"></label><br/>
-        <label>Kolor tła <input #background class="backgroundColor" (input)="onBackgroundInputChange(background.value)" [(ngModel)]="css.background"></label><br/>
-        <label>Cień <input #shadow class="shadow" (input)="onboxShadowInputChange(shadow.value)"[(ngModel)]="css.boxShadow"></label>
+<label>Kolor tekstu <input #color type="text" class="tectColor" (input)="onColorInputChange(color.value)"
+    [(ngModel)]="css.color"></label><br />
+<label>Obramowanie <input #border class="border" (input)="onBorderInputChange(border.value)"
+    [(ngModel)]="css.border"></label><br />
+<label>Kolor tła <input #background class="backgroundColor" (input)="onBackgroundInputChange(background.value)"
+    [(ngModel)]="css.background"></label><br />
+<label>Cień <input #shadow class="shadow" (input)="onboxShadowInputChange(shadow.value)"
+    [(ngModel)]="css.boxShadow"></label>
