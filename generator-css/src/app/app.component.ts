@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {CSS } from 'src/app/models/css.model'
+import { CSS } from './models/css.model';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,25 +9,16 @@ import {CSS } from 'src/app/models/css.model'
 export class AppComponent {
   title = 'generator-css';
 
-  protected css: CSS = {
+  css: CSS = {
     color: "red",
     border: "2px solid blue",
     boxShadow: "0px 0px 10.5px rgba(0, 0, 0, 0.3)",
     background: "#ddd"
   }
 
-  
+  styleAdd(a:CSS){
+    this.css=a;
+  }
 
-  onColorInputChange(value:string){
-    this.css.color = value;
-  }
-  onBorderInputChange(value:string){
-    this.css.border = value;
-  }
-  onboxShadowInputChange(value:string){
-    this.css.boxShadow = value;
-  }
-  onBackgroundInputChange(value:string){
-    this.css.background = value;
-  }
+  
 }
