@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { FormatowanieComponent } from './formatowanie/formatowanie.component';
-import { ShowFormattingComponent } from './show-formatting/show-formatting.component';
+import { FormatowanieComponent } from './css-generator/formatowanie/formatowanie.component';
+import { ShowFormattingComponent } from './css-generator/show-formatting/show-formatting.component';
 import { CssGeneratorComponent } from './css-generator/css-generator.component';
+import { InvoiceFormComponent } from './Reactive-forms/invoice-form/invoice-form.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -12,11 +14,14 @@ import { CssGeneratorComponent } from './css-generator/css-generator.component';
     FormatowanieComponent,
     ShowFormattingComponent,
     CssGeneratorComponent,
+    InvoiceFormComponent,
 
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

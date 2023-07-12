@@ -1,0 +1,32 @@
+<form [formGroup]="invoiceForm" (ngSubmit)="submitForm()">
+    <h2>Dane wystawcy</h2>
+    <div formGroupName="issuer">
+      <label>Nazwa:</label>
+      <input type="text" formControlName="name" required>
+      <!-- Pozostałe pola dla danych wystawcy -->
+  
+      <h2>Dane zamawiającego</h2>
+      <div formGroupName="buyer">
+        <label>Nazwa:</label>
+        <input type="text" formControlName="name">
+        <!-- Pozostałe pola dla danych zamawiającego -->
+      </div>
+  
+      <h2>Pozycje faktury</h2>
+      <div formArrayName="invoiceItems">
+        <div *ngFor="let item of invoiceItems.controls; let i = index" [formGroupName]="i">
+          <label>Nazwa:</label>
+          <input type="text" formControlName="name" required>
+          <!-- Pozostałe pola dla pozycji faktury -->
+        </div>
+      </div>
+  
+      <h2>Podsumowanie zamówienia</h2>
+      <p>Suma netto: {{ calculateNetTotal() }}</p>
+      <p>Suma VAT: {{ calculateVatTotal() }}</p>
+      <p>Suma brutto: {{ calculateGrossTotal() }}</p>
+  
+      <button type="submit">Wyślij fakturę</button>
+    </div>
+  </form>
+  
