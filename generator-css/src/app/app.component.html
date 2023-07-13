@@ -1,8 +1,19 @@
 
-        <app-formatowanie (newCss)="styleAdd($any($event))"></app-formatowanie>
-        <app-show-formatting [css]="css" ></app-show-formatting>
+        <!-- 
         <app-css-generator [css]="css"></app-css-generator>
-        <app-invoice-form></app-invoice-form>
+        <app-invoice-form></app-invoice-form> -->
+        <ul>
+                <li><a [routerLink]="['']">Generator CSS</a></li>
+                <li><a [routerLink]="['/form']">Form</a></li>
+                <li><a [routerLink]="['/rxjs/rozgrzewka']">RXJS - Rozgrzewka</a></li>
+                <li><a [routerLink]="['/rxjs/daty']">RXJS - Daty</a></li>
+                <li><a [routerLink]="['/rxjs/app-mouse-cordinates']">RXJS - Koordynaty myszy po kliknięciu</a></li>
+                <li><a [routerLink]="['/rxjs/app-mouse-cordinates-interval']">RXJS - Koordynaty myszy w interwale</a></li>
+                <li><a [routerLink]="['/rxjs/search-box']">RXJS - SearchBox</a></li>
+        </ul>
+        
+        
+        <router-outlet></router-outlet>
 
        
         

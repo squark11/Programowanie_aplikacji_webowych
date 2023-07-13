@@ -1,32 +1,130 @@
-<form [formGroup]="invoiceForm" (ngSubmit)="submitForm()">
-    <h2>Dane wystawcy</h2>
-    <div formGroupName="issuer">
-      <label>Nazwa:</label>
+<form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
+  <h2>Dane wystawcy</h2>
+  <div formGroupName="seller">
+    <label>
+      Nazwa:
       <input type="text" formControlName="name" required>
-      <!-- Pozostałe pola dla danych wystawcy -->
-  
-      <h2>Dane zamawiającego</h2>
-      <div formGroupName="buyer">
-        <label>Nazwa:</label>
-        <input type="text" formControlName="name">
-        <!-- Pozostałe pola dla danych zamawiającego -->
-      </div>
-  
-      <h2>Pozycje faktury</h2>
-      <div formArrayName="invoiceItems">
-        <div *ngFor="let item of invoiceItems.controls; let i = index" [formGroupName]="i">
-          <label>Nazwa:</label>
-          <input type="text" formControlName="name" required>
-          <!-- Pozostałe pola dla pozycji faktury -->
-        </div>
-      </div>
-  
-      <h2>Podsumowanie zamówienia</h2>
-      <p>Suma netto: {{ calculateNetTotal() }}</p>
-      <p>Suma VAT: {{ calculateVatTotal() }}</p>
-      <p>Suma brutto: {{ calculateGrossTotal() }}</p>
-  
-      <button type="submit">Wyślij fakturę</button>
+    </label>
+    <label>
+      Miasto:
+      <input type="text" formControlName="city" required>
+    </label>
+    <label>
+      Adres:
+      <input type="text" formControlName="address" required>
+    </label>
+    <label>
+      Kod pocztowy:
+      <input type="text" formControlName="postalCode" required>
+    </label>
+    <label>
+      NIP:
+      <input type="text" formControlName="nip" required>
+    </label>
+    <label>
+      Nr konta bankowego:
+      <input type="text" formControlName="bankAccount" required>
+    </label>
+  </div>
+
+  <h2>Dane zamawiającego</h2>
+  <div formGroupName="buyer">
+    <label>
+      Nazwa:
+      <input type="text" formControlName="name">
+    </label>
+    <label>
+      Miasto:
+      <input type="text" formControlName="city">
+    </label>
+    <label>
+      Adres:
+      <input type="text" formControlName="address">
+    </label>
+    <label>
+      Kod pocztowy:
+      <input type="text" formControlName="postalCode">
+    </label>
+    <label>
+      NIP:
+      <input type="text" formControlName="nip">
+    </label>
+  </div>
+
+  <h2>Dane faktury</h2>
+  <label>
+    Nr faktury:
+    <input type="text" formControlName="invoiceNumber" required>
+  </label>
+  <label>
+    Data wystawienia:
+    <input type="date" formControlName="issueDate" required>
+  </label>
+  <label>
+    Data sprzedaży:
+    <input type="date" formControlName="saleDate" required>
+  </label>
+  <label>
+    Termin płatności:
+    <input type="date" formControlName="paymentDeadline" required>
+  </label>
+  <label>
+    Sposób płatności:
+    <select formControlName="paymentMethod" required>
+      <option value="">Wybierz</option>
+      <option value="gotówka">Gotówka</option>
+      <option value="przelew">Przelew</option>
+      <option value="karta">Karta</option>
+    </select>
+  </label>
+
+  <h2>Pozycje faktury</h2>
+  <div formArrayName="invoiceItems">
+    <div *ngFor="let item of invoiceItems.controls; let i = index" [formGroupName]="i">
+      <label>
+        Nazwa:
+        <input type="text" formControlName="name" required>
+      </label>
+      <label>
+        Ilość:
+        <input type="number" formControlName="quantity" required>
+      </label>
+      <label>
+        Jednostka miary:
+        <input type="text" formControlName="unit" required>
+      </label>
+      <label>
+        Cena netto:
+        <input type="number" formControlName="netPrice" required>
+      </label>
+      <label>
+        Stawka VAT:
+        <select formControlName="vatRate" required>
+          <option value="">Wybierz</option>
+          <option value="zw">ZW</option>
+          <option value="0">0%</option>
+          <option value="5">5%</option>
+          <option value="8">8%</option>
+          <option value="23">23%</option>
+        </select>
+      </label>
+      <label>
+        Wartość netto:
+        <input type="number" formControlName="netValue" readonly>
+      </label>
+      <label>
+        Wartość brutto:
+        <input type="number" formControlName="grossValue" readonly>
+      </label>
     </div>
-  </form>
-  
+  </div>
+
+  <button type="button" (click)="addInvoiceItem()">Dodaj pozycję</button>
+
+  <h2>Podsumowanie zamówienia</h2>
+  <p>Suma kwot netto: {{ totalNetValue }}</p>
+  <p>Suma kwot VAT: {{ totalVatValue }}</p>
+  <p>Suma kwot brutto: {{ totalGrossValue }}</p>
+
+  <button type="submit">Zapisz fakturę</button>
+</form>

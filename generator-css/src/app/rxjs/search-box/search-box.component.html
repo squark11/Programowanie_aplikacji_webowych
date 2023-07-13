@@ -1,0 +1,7 @@
+<h2>Search Box</h2>
+<input type="text" id="search-input" placeholder="Wyszukaj" (input)="handleInput($event.target)">
+<p>Ostatnie wyszukiwanie: {{ value }}</p>
+<p>Historia wyszukiwań:</p>
+<ul>
+  <li *ngFor="let search of searchHistory">{{ search }}</li>
+</ul>

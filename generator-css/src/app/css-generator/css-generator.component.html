@@ -3,3 +3,7 @@
 <li *ngIf="css.background">background: {{css.background}};</li>
 <li *ngIf="css.boxShadow">boxShadow: {{css.boxShadow}};</li>
 <li *ngIf="css.border">border: {{css.border}};</li>
+
+<app-formatowanie (newCss)="styleAdd($any($event))"></app-formatowanie>
+<app-show-formatting [css]="css" ></app-show-formatting>
+

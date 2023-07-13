@@ -7,6 +7,11 @@ import { ShowFormattingComponent } from './css-generator/show-formatting/show-fo
 import { CssGeneratorComponent } from './css-generator/css-generator.component';
 import { InvoiceFormComponent } from './Reactive-forms/invoice-form/invoice-form.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RozgrzewkaComponent } from './rxjs/rozgrzewka/rozgrzewka.component';
+import { DatyComponent } from './rxjs/daty/daty.component';
+import { AppMouseCoordinatesComponent } from './rxjs/app-mouse-coordinates/app-mouse-coordinates.component';
+import { AppMouseCoordinatesIntervalComponent } from './rxjs/app-mouse-coordinates-interval/app-mouse-coordinates-interval.component';
+import { SearchBoxComponent } from './rxjs/search-box/search-box.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +20,11 @@ import { AppRoutingModule } from './app-routing.module';
     ShowFormattingComponent,
     CssGeneratorComponent,
     InvoiceFormComponent,
+    RozgrzewkaComponent,
+    DatyComponent,
+    AppMouseCoordinatesComponent,
+    AppMouseCoordinatesIntervalComponent,
+    SearchBoxComponent,
 
   ],
   imports: [
