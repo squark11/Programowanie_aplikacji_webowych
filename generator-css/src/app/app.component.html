@@ -1,22 +1,19 @@
-
-        <!-- 
-        <app-css-generator [css]="css"></app-css-generator>
-        <app-invoice-form></app-invoice-form> -->
-        <ul>
-                <li><a [routerLink]="['']">Generator CSS</a></li>
-                <li><a [routerLink]="['/form']">Form</a></li>
-                <li><a [routerLink]="['/rxjs/rozgrzewka']">RXJS - Rozgrzewka</a></li>
-                <li><a [routerLink]="['/rxjs/daty']">RXJS - Daty</a></li>
-                <li><a [routerLink]="['/rxjs/app-mouse-cordinates']">RXJS - Koordynaty myszy po kliknięciu</a></li>
-                <li><a [routerLink]="['/rxjs/app-mouse-cordinates-interval']">RXJS - Koordynaty myszy w interwale</a></li>
-                <li><a [routerLink]="['/rxjs/search-box']">RXJS - SearchBox</a></li>
-        </ul>
-        
-        
-        <router-outlet></router-outlet>
-
-       
-        
-
-
-
+<nav>
+  <ul>
+    <li><a [routerLink]="['']">Generator CSS</a></li>
+    <li><a [routerLink]="['/form']">Form</a></li>
+    <li class="dropdown">
+      <a>RXJS</a>
+      <ul>
+        <li><a [routerLink]="['/rxjs/rozgrzewka']">Rozgrzewka</a></li>
+        <li><a [routerLink]="['/rxjs/daty']">Daty</a></li>
+        <li><a [routerLink]="['/rxjs/app-mouse-cordinates']">Koordynaty myszy po kliknięciu</a></li>
+        <li><a [routerLink]="['/rxjs/app-mouse-cordinates-interval']">Koordynaty myszy w interwale</a></li>
+        <li><a [routerLink]="['/rxjs/search-box']">SearchBox</a></li>
+        <li><a [routerLink]="['/rxjs/voting']">Głosowanie</a></li>
+        <li><a [routerLink]="['/rxjs/api']">API</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

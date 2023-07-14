@@ -12,6 +12,8 @@ import { DatyComponent } from './rxjs/daty/daty.component';
 import { AppMouseCoordinatesComponent } from './rxjs/app-mouse-coordinates/app-mouse-coordinates.component';
 import { AppMouseCoordinatesIntervalComponent } from './rxjs/app-mouse-coordinates-interval/app-mouse-coordinates-interval.component';
 import { SearchBoxComponent } from './rxjs/search-box/search-box.component';
+import { VotingComponent } from './rxjs/voting/voting.component';
+import { ApiComponent } from './rxjs/api/api.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { SearchBoxComponent } from './rxjs/search-box/search-box.component';
     AppMouseCoordinatesComponent,
     AppMouseCoordinatesIntervalComponent,
     SearchBoxComponent,
+    VotingComponent,
+    ApiComponent,
 
   ],
   imports: [

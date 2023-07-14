@@ -8,6 +8,8 @@ import { DatyComponent } from './rxjs/daty/daty.component';
 import { AppMouseCoordinatesComponent } from './rxjs/app-mouse-coordinates/app-mouse-coordinates.component';
 import { AppMouseCoordinatesIntervalComponent } from './rxjs/app-mouse-coordinates-interval/app-mouse-coordinates-interval.component';
 import { SearchBoxComponent } from './rxjs/search-box/search-box.component';
+import { VotingComponent } from './rxjs/voting/voting.component';
+import { ApiComponent } from './rxjs/api/api.component';
 
 const routes: Routes = [
   { path: '', component: CssGeneratorComponent },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'rxjs/app-mouse-cordinates', component: AppMouseCoordinatesComponent },
   { path: 'rxjs/app-mouse-cordinates-interval', component: AppMouseCoordinatesIntervalComponent },
   { path: 'rxjs/search-box', component: SearchBoxComponent },
+  { path: 'rxjs/voting', component: VotingComponent },
+  { path: 'rxjs/api', component: ApiComponent },
 ];
 
 @NgModule({
