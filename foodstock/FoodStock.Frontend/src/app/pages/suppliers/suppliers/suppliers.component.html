@@ -1,0 +1,11 @@
+<h1>Dostawcy</h1>
+<div class="supplier-list">
+    <div class="supplier-nav">
+        <h3 class="number">No.</h3>
+        <h3>Name</h3>
+    </div>
+    <div class="supplier-element" *ngFor="let supplier of suppliers | async; let i = index" [ngClass]="i%2!==0?'even':''">
+      <h3 class="number">{{i+1}}</h3>
+      <h3>{{supplier.name}}</h3>
+    </div>
+</div>
