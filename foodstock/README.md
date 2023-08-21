@@ -23,3 +23,10 @@ Edycję produktów: Użytkownik ma możliwość modyfikacji istniejących produk
 Usuwanie produktów: Użytkownik może usuwać wybrane produkty.
 Zarządzanie kategoriami: Użytkownik ma dostęp do funkcjonalności dodawania, edycji oraz usuwania kategorii.
 Przeglądanie produktów według kategorii: Użytkownik może przeglądać produkty na podstawie wybranej kategorii.
+
+![image](https://github.com/squark11/Programowanie_aplikacji_webowych/assets/82764740/858c3ed1-264d-4bdb-9cec-0c5a9933d900)
+![image](https://github.com/squark11/Programowanie_aplikacji_webowych/assets/82764740/cc940036-f87e-4666-9c7d-69d9a18b4869)
+![image](https://github.com/squark11/Programowanie_aplikacji_webowych/assets/82764740/088ebefd-33f9-49cc-a0fc-b4afc9687637)
+![image](https://github.com/squark11/Programowanie_aplikacji_webowych/assets/82764740/bc891859-f0ac-4b51-a574-e1cbf8e49c4e)
+
+
